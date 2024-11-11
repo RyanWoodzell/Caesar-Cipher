@@ -36,11 +36,11 @@ public class UserInterface {
             sc.nextLine();
 
             //decrypt text
-            System.out.print("enter a message you would like to decrypt: ");
+            System.out.println("Enter a message you would like to decrypt: ");
             String message = sc.nextLine();
 
             //get key value
-            System.out.print("Please enter key value: ");
+            System.out.println("Please enter key value: ");
             shift = sc.nextInt();
             CaesarCipher decipher = new CaesarCipher(shift, message);
 
