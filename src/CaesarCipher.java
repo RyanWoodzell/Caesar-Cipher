@@ -1,38 +1,59 @@
 package src;
 
-import java.util.ArrayList;
-
 public class CaesarCipher {
-    int shift;
-    String text;
-    char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-    char[] seperatedString;
-    String encryptedString;
-    //int[] numbers = java.util.stream.IntStream.rangeClosed(1, 26).toArray();
 
-
+    //necessary fields
+    private int shift;
+    private String text;
 
     public CaesarCipher(int shift, String text) {
-        this.shift = shift;
-        this.text = text;
-        seperatedString = text.toCharArray();
 
+        // Normalize shift to a positive number within 0-25
+        this.shift = (shift % 26 + 26) % 26;
+        this.text = text;
     }
 
-    public void encrypt() {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < seperatedString.length-1; i++) {
-            if(seperatedString[i]==' '){
-                continue;
-            } else {
-                int positionInAlphabet = seperatedString[i];
-                seperatedString[i]= alphabet[(shift + positionInAlphabet)  % alphabet.length];
-            }
+    private char shiftChar(char c, int shift) {
 
-            stringBuilder.append(seperatedString[i]);
-            //encryption algorithm
+        if (Character.isLowerCase(c)) {
+
+            //returns ASCII 97-122
+            return (char) ('a' + (c - 'a' + shift + 26) % 26);
+
+        } else if (Character.isUpperCase(c)) {
+
+            //returns ASCII 65-90
+            return (char) ('A' + (c - 'A' + shift + 26) % 26);
+
+        } else {
+
+            //Case for non-alphabet character
+            return c;
         }
-        System.out.println(stringBuilder.toString());
+    }
+
+    public String encrypt() {
+
+        StringBuilder encryptedText = new StringBuilder();
+
+        for (char c : text.toCharArray()) {
+
+            //for every character in text, shift char
+            encryptedText.append(shiftChar(c, shift));
+        }
+        return encryptedText.toString();
+    }
+
+    public String decrypt() {
+
+        StringBuilder decryptedText = new StringBuilder();
+
+        for (char c : text.toCharArray()) {
+
+            //for every character in text, shift char
+            decryptedText.append(shiftChar(c, -shift));
+        }
+        return decryptedText.toString();
     }
 
 }
