@@ -42,6 +42,14 @@ This class provides an interactive user interface for the Caesar Cipher program.
 3. **Encrypt and Decrypt**: After encryption, the program will allow you to input an encrypted message and decrypt it using the same shift key.
 4. **Repeat or Exit**: You will be asked if you want to run the program again. If you input `Y`, the process repeats. If you input `N`, the program exits.
 
+### Example Usage
+
+When the program is executed, the user is prompted to enter a message they would like to encrypt, and to input a key value. The program encrypts this message based on the key value.
+
+![image](https://github.com/user-attachments/assets/cbf8b829-fec5-4b45-9168-ef994d9c8369)
+
+After the encryption, the user is promted to enter a message they would like to decrypt, along with the associated key value. The program then decrypts the message based on the key value. 
+
 ## Lessons Learned
 
 - **Cryptography Fundamentals**:  This project was my first experience with cryptography, and it provided a solid foundation in understanding the principles behind encryption and decryption. It sparked my interest in exploring more advanced cryptographic techniques and their real-world applications.
