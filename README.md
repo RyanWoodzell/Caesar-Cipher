@@ -42,12 +42,15 @@ This class provides an interactive user interface for the Caesar Cipher program.
 3. **Encrypt and Decrypt**: After encryption, the program will allow you to input an encrypted message and decrypt it using the same shift key.
 4. **Repeat or Exit**: You will be asked if you want to run the program again. If you input `Y`, the process repeats. If you input `N`, the program exits.
 
-### Example
+## Lessons Learned
 
-```java
-public class Main {
-    public static void main(String[] args) {
-        UserInterface ui = new UserInterface();
-        ui.run(); // Start the program
-    }
-}
+- **Cryptography Fundamentals**:  This project was my first experience with cryptography, and it provided a solid foundation in understanding the principles behind encryption and decryption. It sparked my interest in exploring more advanced cryptographic techniques and their real-world applications.
+- **Caesar Cipher Implentation**: I learned how to implement the Caesar Cipher, one of the most basic encryption algorithms. This project allowed me to gain hands-on experience with the mechanics of shifting letters in the alphabet and how simple mathematical operations can be used for data encryption and decryption.
+- **Problem-Solving with Algorithms**: Through this project, I developed a better understanding of how algorithms can be used to solve complex problems in a structured way. I learned how to implement and modify algorithms to meet specific requirements, such as handling non-alphabetic characters or ensuring shift values remain within a valid range.
+
+## Future Enhancements
+
+There are a few things I would like to add to this project:
+
+- **Explicit Operations**: I plan to further develop the user interface to allow users to select different types of operations (e.g., encrypt, decrypt, and possibly even options for more advanced ciphers). This will make the tool more flexible and user-friendly.
+- **Graphical User Interface (GUI)**: In the future, I plan on learning a Java GUI framework, such as Swing or JavaFX, to create a more interactive and visually appealing interface. A GUI would allow users to interact with the program through buttons, text fields, and other graphical elements, improving the overall user experience.
