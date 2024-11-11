@@ -48,7 +48,7 @@ When the program is executed, the user is prompted to enter a message they would
 
 ![image](https://github.com/user-attachments/assets/cbf8b829-fec5-4b45-9168-ef994d9c8369)
 
-After the encryption, the user is promted to enter a message they would like to decrypt, along with the associated key value. The program then decrypts the message based on the key value. 
+After the encryption, the user is promted to enter a message they would like to decrypt, along with the associated key value. The program then decrypts the message based on the key value and asks the user if they would like to run the program again. 
 
 ![image](https://github.com/user-attachments/assets/2257ef79-8372-46ed-9aaf-9149d1b91458)
 
